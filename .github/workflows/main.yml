@@ -12,8 +12,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3.5.3
     
-    - name: Descarga codigo
-      run: ls -ltr
+    - name: Setup Java JDK
+      uses: actions/setup-java@v3.12.0
+      with:
+        java-version: '11'
 
-    - name: Hola mundo
-      run: echo "hola mundo"
+    - name: Compile Maven
+      run: |
+        chmod +x mvnw
+        ./mvwn clean compile 
+    
+    
