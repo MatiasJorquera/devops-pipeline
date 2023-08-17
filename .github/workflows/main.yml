@@ -21,6 +21,6 @@ jobs:
     - name: Compile Maven
       run: |
         chmod +x mvnw
-        ./mvwn clean compile 
+        ./mvnw clean compile 
     
     
